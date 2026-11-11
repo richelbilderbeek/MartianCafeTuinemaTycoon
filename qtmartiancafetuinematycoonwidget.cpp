@@ -192,6 +192,13 @@ void QtMartianCafeTuinemaTycoonWidget::createPanels()
     title->setFont(font);
     title->move(7, 6);
     title->adjustSize();
+    // Not all systems have Arial: make the title fit with other fonts too
+    while (title->width() > panel->width() - 14 && font.pixelSize() > 8)
+    {
+      font.setPixelSize(font.pixelSize() - 1);
+      title->setFont(font);
+      title->adjustSize();
+    }
     QFont small_font("Arial");
     small_font.setPixelSize(11);
     QLabel* const copyright = new QLabel("(C) 2005 Joost van den Bogaart", panel);

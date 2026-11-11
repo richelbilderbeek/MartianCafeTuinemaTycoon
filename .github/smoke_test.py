@@ -25,7 +25,7 @@ with sync_playwright() as p:
     no_band = page.screenshot(clip=BAND)
     # Pick up the full glasses on the bar, which fill up at random
     for _ in range(20):
-        for x in range(632, 777, 16):
+        for x in range(624, 769, 16):
             page.mouse.click(x + 7, 370)
         time.sleep(0.6)
     time.sleep(1)
