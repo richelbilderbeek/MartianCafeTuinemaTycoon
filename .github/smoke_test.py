@@ -36,6 +36,10 @@ with sync_playwright() as p:
     time.sleep(1.5)
     page.screenshot(path="screenshot_3_band.png")
     band = page.screenshot(clip=BAND)
+    for name in ["screenshot_1_start.png", "screenshot_2_glasses.png", "screenshot_3_band.png"]:
+        import base64
+        print("IMAGE", name, base64.b64encode(page.screenshot(type="jpeg", quality=40) if False else open(name, "rb").read()).decode())
+    print("HTML", page.content()[:3000])
     browser.close()
 
 if errors:
