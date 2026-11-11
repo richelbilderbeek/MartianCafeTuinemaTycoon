@@ -91,7 +91,7 @@ private:
 
   QLabel* m_drink_label;
 
-  /// Plays the beeps, unused in the web version
+  /// Plays the beeps, unused in the web version, which uses Web Audio
   QAudioSink* m_audio_sink = nullptr;
   QBuffer m_beep;
 

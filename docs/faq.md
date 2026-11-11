@@ -11,4 +11,4 @@ That is the music: the game plays a random beep every time it redraws the screen
 
 ## Can I play the game in my browser?
 
-Not yet. The game runs on Linux and Windows.
+Yes, at the [Play](play.md) page.

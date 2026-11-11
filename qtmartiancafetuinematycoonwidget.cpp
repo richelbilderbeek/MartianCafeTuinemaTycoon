@@ -22,8 +22,37 @@
 #include <QMouseEvent>
 #include <QPainter>
 #include <QRandomGenerator>
-#ifndef Q_OS_WASM
-// Qt Multimedia is not available for WebAssembly
+#ifdef Q_OS_WASM
+// Qt Multimedia is not available for WebAssembly:
+// the web version plays the beeps with the browser's Web Audio
+#include <emscripten/em_js.h>
+
+EM_JS(void, mctt_beep_in_browser, (int frequency_hz, int duration_msecs), {
+  if (!window.mcttAudio) {
+    window.mcttAudio = new AudioContext();
+    // Browsers only allow sound after the user has clicked the page
+    var resume = function() { window.mcttAudio.resume(); };
+    document.addEventListener('pointerdown', resume);
+    document.addEventListener('mousedown', resume);
+  }
+  var context = window.mcttAudio;
+  if (window.mcttOscillator) {
+    try { window.mcttOscillator.stop(); } catch (e) {}
+    window.mcttOscillator = null;
+  }
+  if (context.state !== 'running') return;
+  var oscillator = context.createOscillator();
+  var gain = context.createGain();
+  oscillator.type = 'square'; // As the PC speaker makes
+  oscillator.frequency.value = frequency_hz;
+  gain.gain.value = 0.05;
+  oscillator.connect(gain);
+  gain.connect(context.destination);
+  oscillator.start();
+  oscillator.stop(context.currentTime + duration_msecs / 1000);
+  window.mcttOscillator = oscillator;
+});
+#else
 #include <QAudioFormat>
 #include <QAudioSink>
 #include <QMediaDevices>
@@ -175,8 +204,9 @@ void QtMartianCafeTuinemaTycoonWidget::createPanels()
 void QtMartianCafeTuinemaTycoonWidget::beep(const int frequency_hz, const int duration_msecs)
 {
 #ifdef Q_OS_WASM
-  Q_UNUSED(frequency_hz);
-  Q_UNUSED(duration_msecs);
+  // The Win32 Beep does not play frequencies below 37 Hz
+  if (frequency_hz < 37) return;
+  mctt_beep_in_browser(frequency_hz, duration_msecs);
 #else
   m_audio_sink->stop();
   m_beep.close();

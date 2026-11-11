@@ -38,3 +38,6 @@ moc_*
 qrc_*
 *.pro.user*
 /martiancafetuinematycoon
+
+# The web version of the game, built by continuous integration
+docs/game/
