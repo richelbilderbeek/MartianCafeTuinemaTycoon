@@ -2,9 +2,7 @@
 
 Martian Café Tuinema Tycoon is a bartender game
 in which you serve beer to a café full of thirsty Martians.
-It was written by Joost van den Bogaart in 2005
-and is one of
-[Richèl Bilderbeek's games](https://richelbilderbeek.github.io/games).
+It was written by Joost van den Bogaart in 2005.
 
 ![The bar](screenshot_bar.png)
 
