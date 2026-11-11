@@ -26,3 +26,6 @@
 *.exe
 *.out
 *.app
+
+# Zensical website
+site/
