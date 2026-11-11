@@ -12,12 +12,22 @@ and is one of
 
 ## Building the game
 
-The game was written in C++Builder using the VCL
-(`MCTTycoon.bpr`).
-This is the only version of the game:
-there is no version that builds with other tools.
+The game was originally written in C++Builder using the VCL,
+which can be found in the
+[v1.0 release](https://github.com/richelbilderbeek/MartianCafeTuinemaTycoon/releases/tag/v1.0).
+It now uses Qt and is built by continuous integration:
 
-To build the game, open `MCTTycoon.bpr` in C++Builder
-and build the project.
-Put the bitmaps (`*.bmp`) in the same folder as the executable,
-as the game loads these at startup.
+- [The Linux build script](https://github.com/richelbilderbeek/MartianCafeTuinemaTycoon/blob/master/.github/workflows/build_linux.yaml)
+  checks that the game builds on Linux
+- [The Windows build script](https://github.com/richelbilderbeek/MartianCafeTuinemaTycoon/blob/master/.github/workflows/build_windows.yaml)
+  creates a zip file with the Windows executable,
+  which can be downloaded from the workflow run
+
+To build the game locally:
+
+```bash
+mkdir build
+cd build
+qmake ../martiancafetuinematycoon.pro
+make
+```

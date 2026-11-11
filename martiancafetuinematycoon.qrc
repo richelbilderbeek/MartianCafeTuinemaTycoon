@@ -1,0 +1,21 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+  <file alias="images/AlienBierHalle.ico">resources/AlienBierHalle.ico</file>
+  <file alias="images/Arrow.bmp">resources/Arrow.bmp</file>
+  <file alias="images/Background1.bmp">resources/Background1.bmp</file>
+  <file alias="images/Background2.bmp">resources/Background2.bmp</file>
+  <file alias="images/Band1.bmp">resources/Band1.bmp</file>
+  <file alias="images/Band2.bmp">resources/Band2.bmp</file>
+  <file alias="images/Bar.bmp">resources/Bar.bmp</file>
+  <file alias="images/Barman.bmp">resources/Barman.bmp</file>
+  <file alias="images/Dienblad.bmp">resources/Dienblad.bmp</file>
+  <file alias="images/Glas.bmp">resources/Glas.bmp</file>
+  <file alias="images/L0.bmp">resources/L0.bmp</file>
+  <file alias="images/L1.bmp">resources/L1.bmp</file>
+  <file alias="images/L2.bmp">resources/L2.bmp</file>
+  <file alias="images/R0.bmp">resources/R0.bmp</file>
+  <file alias="images/R1.bmp">resources/R1.bmp</file>
+  <file alias="images/R2.bmp">resources/R2.bmp</file>
+  <file alias="images/Wall.bmp">resources/Wall.bmp</file>
+</qresource>
+</RCC>

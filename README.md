@@ -2,8 +2,6 @@
 
 - [Go to the nicely rendered website](https://richelbilderbeek.github.io/MartianCafeTuinemaTycoon/).
 
-Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
----|---
-`master`|[![Build Status](https://travis-ci.org/richelbilderbeek/MartianCafeTuinemaTycoon.svg?branch=master)](https://travis-ci.org/richelbilderbeek/MartianCafeTuinemaTycoon)
-
-The game MartianCafeTuinemaTycoon using the C++ VCL library
+The game MartianCafeTuinemaTycoon using Qt.
+The original C++Builder version is in the
+[v1.0 release](https://github.com/richelbilderbeek/MartianCafeTuinemaTycoon/releases/tag/v1.0).
