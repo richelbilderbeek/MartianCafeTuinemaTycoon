@@ -5,3 +5,4 @@ MartianCafeTuinemaTycoon
 Tuinema
 VCL
 café
+codecov

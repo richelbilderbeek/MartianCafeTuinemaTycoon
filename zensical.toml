@@ -2,7 +2,7 @@
 site_name = "Martian Café Tuinema Tycoon"
 site_url = "https://richelbilderbeek.github.io/MartianCafeTuinemaTycoon/"
 repo_url = "https://github.com/richelbilderbeek/MartianCafeTuinemaTycoon"
-edit_uri = "blob/master/docs/"
+edit_uri = "blob/main/docs/"
 
 nav = [
   { "Start" = "README.md"},

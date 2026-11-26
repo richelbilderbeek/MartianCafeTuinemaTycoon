@@ -15,9 +15,9 @@ which can be found in the
 [v1.0 release](https://github.com/richelbilderbeek/MartianCafeTuinemaTycoon/releases/tag/v1.0).
 It now uses Qt and is built by continuous integration:
 
-- [The Linux build script](https://github.com/richelbilderbeek/MartianCafeTuinemaTycoon/blob/master/.github/workflows/build_linux.yaml)
+- [The Linux build script](https://github.com/richelbilderbeek/MartianCafeTuinemaTycoon/blob/main/.github/workflows/build_linux.yaml)
   checks that the game builds on Linux
-- [The Windows build script](https://github.com/richelbilderbeek/MartianCafeTuinemaTycoon/blob/master/.github/workflows/build_windows.yaml)
+- [The Windows build script](https://github.com/richelbilderbeek/MartianCafeTuinemaTycoon/blob/main/.github/workflows/build_windows.yaml)
   creates a zip file with the Windows executable,
   which can be downloaded from the workflow run
 
